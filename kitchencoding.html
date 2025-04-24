@@ -1,0 +1,356 @@
+<!-- home.component.html -->
+<div class="home-container">
+    <header class="header">
+      <h1 class="welcome-heading fade-in">Welcome to Kitchen Coding</h1>
+      <!-- Tagline -->
+      <p class="tagline">The all-new coding competition platform</p>
+      <nav>
+        <ul>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  
+    <section class="upcoming-contest slide-up">
+        <h2>🔥 Current Contest: HackArena</h2>
+        <div class="contest-details">
+          <p><strong>Date:</strong> May 5, 2025</p>
+          <p><strong>Time:</strong> 10:00 AM (IST)</p>
+          <p><strong>Venue:</strong> Virtual (Online)</p>
+          <p><strong>Registration Deadline:</strong> May 25, 2025</p>
+        </div>
+        <!-- Register Now Button with Link -->
+        <a href="hackarena.html">
+          <button class="btn-register">🚀 Register Now</button>
+        </a>
+      </section>
+      
+  
+      <section class="ongoing-contests fade-in">
+        <h2>🌟 Ongoing Contests</h2>
+        <div class="contest-list">
+          <div class="contest-item zoom-in">
+            <h3>HackArena 2025</h3>
+            <p>Join the ultimate coding challenge and compete with the best coders for exciting prizes!</p>
+            <p><strong>Status:</strong> Ongoing</p>
+            <!-- View Contest Button with Link -->
+            <a href="hackarena.html">
+              <button class="btn-register">View Contest</button>
+            </a>
+          </div>
+        </div>
+      </section>
+      
+      
+
+  
+      <section class="notifications slide-in-right">
+        <h2>🔔 Notifications</h2>
+        <div class="notification-item">
+          <p><strong>🚨 HackArena 2025 is LIVE!</strong></p>
+          <p>The ultimate coding challenge is now running! Register now and participate to win amazing prizes.</p>
+          <p><strong>Status:</strong> Ongoing</p>
+          <a href="hackarena.html" class="btn-register">Join the Contest</a>
+        </div>
+      </section>
+      
+  
+    <footer>
+      <p>&copy; 2025 Kitchen Coding</p>
+    </footer>
+  </div>
+  
+  <style>
+  /* Base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('/assets/bghome.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+  }
+  
+  /* Container Background Overlay */
+  /* Container Background Overlay */
+.home-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  backdrop-filter: blur(6px) brightness(1.1);
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  background: rgba(30, 30, 47, 0.9);
+  padding: 40px;
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  animation: slideDown 1s ease;
+}
+
+/* Styling for the Welcome Heading */
+/* Updated Styling for the Welcome Heading */
+.welcome-heading {
+  font-family: 'Orbitron', sans-serif;  /* Futuristic font */
+  font-size: 4rem;  /* Increased size for a bold statement */
+  color: #fff;  /* White text for a clean contrast */
+  text-transform: uppercase;  /* Uppercase letters */
+  letter-spacing: 5px;  /* Increased letter spacing for more tech feel */
+  font-weight: 700;  /* Bold weight */
+  text-shadow: 0 0 15px #00ff99, 0 0 30px #00ff99, 0 0 45px #00ff99;  /* Glowing text shadow */
+  padding: 30px 50px;
+  background: linear-gradient(45deg, #00bcd4, #ff00c7, #8a2be2);  /* Futuristic gradient colors */
+  border-radius: 20px;  /* Rounded corners for a sleek look */
+  display: inline-block;
+  margin-bottom: 30px;
+  transition: transform 0.4s ease-in-out, color 0.3s ease-in-out, text-shadow 0.5s ease-in-out;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);  /* Shadow to give depth */
+}
+
+/* Hover effect: Glowing and scaling */
+
+
+/* Animation for text (glow and movement effect) */
+@keyframes glowingText {
+  0% {
+    text-shadow: 0 0 15px #00ff99, 0 0 30px #00ff99, 0 0 45px #00ff99;
+  }
+  50% {
+    text-shadow: 0 0 30px #ff00c7, 0 0 50px #ff00c7, 0 0 75px #8a2be2;
+  }
+  100% {
+    text-shadow: 0 0 15px #00ff99, 0 0 30px #00ff99, 0 0 45px #00ff99;
+  }
+}
+
+/* Apply the glowing animation */
+.welcome-heading {
+  animation: glowingText 1.5s ease-in-out infinite;  /* Continuous glowing effect */
+}
+
+
+/* Navigation Menu */
+.header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Navigation links styling */
+.header nav ul li a {
+  color: #ffcc80;  /* Soft gold color */
+  font-weight: bold;
+  font-size: 1.2rem;  /* Larger font size */
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 6px;
+  border: 2px solid transparent;
+}
+
+/* Hover effect for nav links */
+.header nav ul li a:hover {
+  background-color: #a87d70;
+  color: #fff;
+  border: 2px solid #ff7043;
+}
+/* Styling for the tagline under the heading */
+.tagline {
+  font-family: 'Orbitron', sans-serif;  /* Same futuristic font */
+  font-size: 1.5rem;  /* Slightly smaller size than the heading */
+  color: #ffffff;  /* White text for contrast */
+  text-transform: uppercase;  /* Uppercase letters for consistency */
+  letter-spacing: 2px;  /* Slight letter-spacing for readability */
+  font-weight: 400;  /* Regular weight */
+  text-shadow: 0 0 5px #00bcd4, 0 0 10px #ff00c7;  /* Soft glowing text effect */
+  padding: 10px 20px;
+  margin-top: 10px;  /* Space between heading and tagline */
+  background: rgba(0, 0, 0, 0.4);  /* Slight dark background */
+  border-radius: 8px;  /* Rounded corners */
+  display: inline-block;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Hover effect for tagline */
+
+
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+  
+  /* Section Styles */
+  section {
+    margin: 30px 0;
+    padding: 30px;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Buttons */
+  button {
+    background-color: #ff7043;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+  }
+  
+  /* Contest Item */
+  .contest-item {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.4s;
+  }
+  
+  .contest-item:hover {
+    transform: scale(1.02);
+  }
+  
+  .contest-item a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0288d1;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .contest-item a:hover {
+    color: #01579b;
+  }
+  
+  /* Notifications */
+  .notification-item {
+    background: #fce4ec;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #1e1e2f;
+    color: white;
+    border-radius: 8px;
+    margin-top: 30px;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes slideDown {
+    from {transform: translateY(-30px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+  }
+  
+  @keyframes slideUp {
+    from {transform: translateY(30px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+  }
+  
+  @keyframes slideInRight {
+    from {transform: translateX(50px); opacity: 0;}
+    to {transform: translateX(0); opacity: 1;}
+  }
+  
+  @keyframes zoomIn {
+    from {transform: scale(0.9); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+  }
+  
+  .fade-in { animation: fadeIn 1.2s ease; }
+  .slide-up { animation: slideUp 1s ease; }
+  .slide-in-right { animation: slideInRight 1s ease; }
+  .zoom-in { animation: zoomIn 0.8s ease; }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .header nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    section {
+      padding: 20px;
+    }
+  
+    button {
+      width: 100%;
+    }
+    
+  }
+  /* styles.css or styles.scss */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+}
+
+.body-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+  
+  </style>
+  <!-- index.html -->
+<body>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+  
+    <img src="bghome.png" alt="background" class="body-bg" />
+    <app-root></app-root>
+  </body>
+  
+  
