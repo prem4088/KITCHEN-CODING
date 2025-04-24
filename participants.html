@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Participants List</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: #fff;
+      padding: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #fdb813;
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(5px);
+    }
+
+    th, td {
+      padding: 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: left;
+    }
+
+    th {
+      background-color: rgba(253, 184, 19, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <h2>Registered Participants</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>College</th>
+        <th>Language</th>
+      </tr>
+    </thead>
+    <tbody id="studentTable"></tbody>
+  </table>
+
+  <script>
+    const students = JSON.parse(localStorage.getItem("students")) || [];
+    const table = document.getElementById("studentTable");
+
+    students.forEach(student => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${student.name}</td>
+        <td>${student.email}</td>
+        <td>${student.college}</td>
+        <td>${student.language}</td>
+      `;
+      table.appendChild(row);
+    });
+  </script>
+</body>
+</html>
